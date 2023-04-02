@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "magicmod:block/lavender"
+  },
+  "render_type": "cutout"
+}

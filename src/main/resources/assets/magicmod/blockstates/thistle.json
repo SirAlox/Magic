@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "magicmod:block/thistle_bottom"
+    },
+    "half=upper": {
+      "model": "magicmod:block/thistle_top"
+    }
+  }
+}
