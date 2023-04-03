@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "magicmod:block/juncus_bottom"
+    },
+    "half=upper": {
+      "model": "magicmod:block/juncus_top"
+    }
+  }
+}

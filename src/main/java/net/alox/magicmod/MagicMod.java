@@ -39,6 +39,10 @@ public class MagicMod {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.LAVENDER.getId(), ModBlocks.POTTED_LAVENDER);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CARNATION.getId(), ModBlocks.POTTED_CARNATION);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CHAMOMILE.getId(), ModBlocks.POTTED_CHAMOMILE);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.VIOLET.getId(), ModBlocks.POTTED_VIOLET);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PEONY.getId(), ModBlocks.POTTED_PEONY);
         });
     }
 

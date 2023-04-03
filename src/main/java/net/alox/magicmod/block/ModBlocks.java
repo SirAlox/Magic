@@ -1,6 +1,7 @@
 package net.alox.magicmod.block;
 
 import net.alox.magicmod.MagicMod;
+import net.alox.magicmod.block.custom.river_plant;
 import net.alox.magicmod.item.ModCreativeModeTab;
 import net.alox.magicmod.item.ModItems;
 import net.minecraft.world.effect.MobEffects;
@@ -33,9 +34,51 @@ public class ModBlocks {
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.LAVENDER,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
 
+    public static final RegistryObject<Block> ROSEMARY = registerBlock("rosemary",
+            () -> new CropBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS)), ModCreativeModeTab.BASIC_TAB);
+
     public static final RegistryObject<Block> THISTLE = registerBlock("thistle",
-            () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)),
+            () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)),
             ModCreativeModeTab.BASIC_TAB);
+
+    public static final RegistryObject<Block> JUNCUS = registerBlock("juncus",
+            () -> new river_plant(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)),
+            ModCreativeModeTab.BASIC_TAB);
+
+    public static final RegistryObject<Block> CARNATION = registerBlock("carnation",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 5,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModCreativeModeTab.BASIC_TAB);
+    public static final RegistryObject<Block> POTTED_CARNATION = BLOCKS.register("potted_carnation",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CARNATION,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
+
+    public static final RegistryObject<Block> CHAMOMILE = registerBlock("chamomile",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 5,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModCreativeModeTab.BASIC_TAB);
+    public static final RegistryObject<Block> POTTED_CHAMOMILE = BLOCKS.register("potted_chamomile",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CHAMOMILE,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
+
+    public static final RegistryObject<Block> PEONY = registerBlock("peony",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 5,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModCreativeModeTab.BASIC_TAB);
+    public static final RegistryObject<Block> POTTED_PEONY = BLOCKS.register("potted_peony",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.PEONY,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
+
+    public static final RegistryObject<Block> VIOLET = registerBlock("violet",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 5,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModCreativeModeTab.BASIC_TAB);
+    public static final RegistryObject<Block> POTTED_VIOLET = BLOCKS.register("potted_violet",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.VIOLET,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
+
+    public static final RegistryObject<Block> WORMWOOD = registerBlock("wormwood",
+            () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)),
+            ModCreativeModeTab.BASIC_TAB);
+
+
+
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
                                                                             CreativeModeTab tab) {
@@ -45,4 +88,7 @@ public class ModBlocks {
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
+
+
+
 }

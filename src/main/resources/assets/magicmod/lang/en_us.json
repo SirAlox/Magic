@@ -1,5 +1,11 @@
 {
   "block.magicmod.lavender": "Lavender",
   "block.magicmod.potted_lavender": "Potted Lavender",
-  "block.magicmod.thistle": "Thistle"
+  "block.magicmod.thistle": "Thistle",
+  "block.magicmod.juncus": "Juncus",
+  "block.magicmod.carnation": "Carnation",
+  "block.magicmod.chamomile": "Chamomile",
+  "block.magicmod.peony": "Peony",
+  "block.magicmod.violet": "Violet",
+  "block.magicmod.wormwood": "Wormwood"
 }
